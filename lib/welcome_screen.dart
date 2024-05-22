@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:signgolos/app_colors.dart';
+import 'package:signgolos/home_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:signgolos/home_screen.dart';
 import 'login_screen.dart';  // Import file login_screen.dart
 
 class WelcomeScreen extends StatefulWidget {
@@ -86,7 +88,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                  MaterialPageRoute(builder: (context) => HomeScreen()),
                 );
               },
               style: ElevatedButton.styleFrom(
@@ -99,7 +101,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ),
               child: Text(
                   'Get started',
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontFamily: 'Poppins-Light',
+                  ),
               ),
             ),
           ],

@@ -70,6 +70,7 @@ flutter:
   assets:
     - assets/images/
     - assets/logo/
+    - assets/sign_language/
   fonts:
     - family: Poppins-Light
       fonts:

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:signgolos/login_screen.dart';
 import 'package:signgolos/profile.dart';
 import 'package:signgolos/Scan_screen/scan_choose.dart';
 import 'package:signgolos/Scan_screen/camera.dart';
 import 'package:signgolos/Scan_screen/library_image.dart';
 import 'Design_screen/app_header.dart';
+import 'package:signgolos/text_translate.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -52,12 +54,12 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           ListTile(
-            leading: Icon(Icons.home),
-            title: Text('Home'),
+            leading: Icon(Icons.login),
+            title: Text('Login'),
             onTap: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => HomeScreen()),
+                MaterialPageRoute(builder: (context) => LoginScreen()),
               );
             },
           ),
@@ -86,24 +88,36 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget _buildBanner() {
     return Container(
       margin: EdgeInsets.all(10.0),
-      height: 200.0,
+      height: 250.0,
       decoration: BoxDecoration(
-        color: Color.fromRGBO(0, 176, 232, 1),
+        image: DecorationImage(
+          image: AssetImage('assets/images/background.png'),
+          fit: BoxFit.cover,
+        ),
         borderRadius: BorderRadius.circular(10.0),
       ),
-      child: Center(
-        child: Text(
-          'Đây là câu quotes',
-          style: TextStyle(
-            fontFamily: 'Poppins-Light',
-            color: Colors.white,
-            fontSize: 24.0,
-            fontWeight: FontWeight.bold,
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 20.0),
+        decoration: BoxDecoration(
+          color: Colors.black.withOpacity(0.3),
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+        child: Center(
+          child: Text(
+            "Tapping into sign language is not just about what's seen, but what's felt from the heart.",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontFamily: 'Poppins-Light',
+              color: Colors.white,
+              fontSize: 16.0,
+              fontWeight: FontWeight.normal,
+            ),
           ),
         ),
       ),
     );
   }
+
 
   Widget _buildSectionTitle(String title) {
     return Padding(
@@ -147,11 +161,11 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         _buildFeatureCard(
           icon: Icons.camera_alt,
-          title: 'Camera',
+          title: 'Text Translate',
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => CameraScreen()),
+              MaterialPageRoute(builder: (context) => TextTranslateScreen()),
             );
           },
         ),
