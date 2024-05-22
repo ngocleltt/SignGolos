@@ -74,8 +74,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           Text(
             text,
             style: TextStyle(
-              fontFamily: 'Poppins-Light', // Thay thế bằng font chữ bạn muốn
-              fontSize: 20,
+              fontFamily: 'Poppins-Light',
+              fontSize: 16,
               color: Colors.black54,
             ),
             textAlign: TextAlign.center,
@@ -84,7 +84,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Điều hướng đến trang đăng nhập
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => LoginScreen()),
@@ -94,8 +93,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 backgroundColor: Color.fromRGBO(0, 176, 232, 1),
                 padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                 textStyle: TextStyle(
-                  fontSize: 18, // Kích thước font chữ của nút
-                  fontFamily: 'Poppins-Light', // Thay thế bằng font chữ bạn muốn
+                  fontSize: 18,
+                  fontFamily: 'Poppins-Light',
                 ),
               ),
               child: Text(

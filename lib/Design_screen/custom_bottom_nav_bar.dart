@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:signgolos/app_colors.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import '../login_screen.dart';
+import '../profile.dart';
+import '../Scan_screen/scan_choose.dart';
 
-class CustomBottomNavBar extends StatelessWidget {
+class BottomNavBar extends StatelessWidget {
   final int selectedIndex;
   final Function(int) onItemTapped;
 
-  CustomBottomNavBar({required this.selectedIndex, required this.onItemTapped});
+  BottomNavBar({
+    required this.selectedIndex,
+    required this.onItemTapped,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +36,9 @@ class CustomBottomNavBar extends StatelessWidget {
         ),
       ],
       currentIndex: selectedIndex,
-      selectedItemColor: Colors.blue,
+      selectedItemColor: Colors.blue, // Màu cho mục được chọn
+      unselectedItemColor: Colors.grey, // Màu cho các mục không được chọn
+      backgroundColor: Color.fromRGBO(0, 176, 232, 1), // Màu nền của BottomNavigationBar
       onTap: onItemTapped,
     );
   }
