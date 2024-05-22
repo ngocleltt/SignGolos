@@ -49,7 +49,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               effect: WormEffect(
                 dotHeight: 12.0,
                 dotWidth: 12.0,
-                activeDotColor: Color.fromRGBO(0, 176, 232, 1),
+                activeDotColor: appblue,
               ),
             ),
           ),
@@ -92,7 +92,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 );
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromRGBO(0, 176, 232, 1),
+                backgroundColor: appblue,
                 padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                 textStyle: TextStyle(
                   fontSize: 18,

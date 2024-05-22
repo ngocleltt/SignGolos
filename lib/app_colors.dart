@@ -9,3 +9,5 @@ const white = Color.fromRGBO(255, 255, 255, 1);
 const softgreen = Color.fromRGBO(129, 199, 107, 1);
 const lightgrey = Color.fromRGBO(220, 224, 219, 1);
 const lightblue = Color.fromRGBO(0, 176, 232, 1);
+const lightogrance = Color.fromRGBO(189,171,196, 1);
+const appblue = Color.fromRGBO(127,169,215, 1);

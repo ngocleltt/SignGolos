@@ -6,6 +6,7 @@ import 'package:signgolos/Scan_screen/camera.dart';
 import 'package:signgolos/Scan_screen/library_image.dart';
 import 'Design_screen/app_header.dart';
 import 'package:signgolos/text_translate.dart';
+import 'package:signgolos/app_colors.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -18,9 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppHeader(
         title: 'Home',
-        backgroundColor: Color.fromRGBO(0, 176, 232, 1),
         titleColor: Colors.white,
-        toolbarHeight: 80.0,
         fontFamily: 'Poppins-Light',
       ),
       drawer: _buildDrawer(context),
@@ -43,12 +42,13 @@ class _HomeScreenState extends State<HomeScreen> {
         children: <Widget>[
           DrawerHeader(
             decoration: BoxDecoration(
-              color: Color.fromRGBO(0, 176, 232, 1),
+              color: lightogrance,
             ),
             child: Text(
               'Menu',
               style: TextStyle(
                 color: Colors.white,
+                fontFamily: 'Poppins-Light',
                 fontSize: 24,
               ),
             ),
@@ -195,7 +195,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Icon(
                 icon,
                 size: 50.0,
-                color: Color.fromRGBO(0, 176, 232, 1),
+                color: appblue,
               ),
               Text(
                 title,

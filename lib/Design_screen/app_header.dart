@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:signgolos/app_colors.dart';
 
 class AppHeader extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -9,9 +10,9 @@ class AppHeader extends StatelessWidget implements PreferredSizeWidget {
 
   AppHeader({
     required this.title,
-    this.backgroundColor = const Color.fromRGBO(0, 176, 232, 1),
+    this.backgroundColor = lightogrance,
     this.titleColor = Colors.white,
-    this.toolbarHeight = 50,
+    this.toolbarHeight = 80,
     this.fontFamily = 'Poppins-Light',
   });
 

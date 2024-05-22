@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:signgolos/Design_screen/app_header.dart';
+import 'package:signgolos/app_colors.dart';
 import '../Design_screen/custom_bottom_nav_bar.dart';
 import '../login_screen.dart';
 import '../home_screen.dart';
@@ -90,8 +91,8 @@ class _ScanChooseScreenState extends State<ScanChooseScreen> {
       child: InkWell(
         onTap: onTap,
         child: Container(
-          width: 150.0, // Đặt chiều rộng cố định cho hình vuông
-          height: 150.0, // Đặt chiều cao cố định cho hình vuông
+          width: 150.0,
+          height: 150.0,
           child: Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -99,7 +100,7 @@ class _ScanChooseScreenState extends State<ScanChooseScreen> {
                 Icon(
                   icon,
                   size: 80.0,
-                  color: Color.fromRGBO(0, 176, 232, 1),
+                  color: appblue,
                 ),
                 SizedBox(height: 10),
                 Text(

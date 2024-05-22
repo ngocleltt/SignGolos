@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:signgolos/Design_screen/app_header.dart';
+import 'package:signgolos/app_colors.dart';
 
 class TextTranslateScreen extends StatefulWidget {
   @override
@@ -22,7 +23,7 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
     return Scaffold(
       appBar: AppHeader(
         title: 'Text to Sign Language',
-        backgroundColor: Color.fromRGBO(0, 176, 232, 1),
+        backgroundColor: appblue,
         titleColor: Colors.white,
         toolbarHeight: 80.0,
         fontFamily: 'Poppins-Light',
@@ -44,7 +45,7 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
               onPressed: _translateText,
               child: Text('Translate'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromRGBO(0, 176, 232, 1),
+                backgroundColor: appblue,
                 padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 15.0),
                 textStyle: TextStyle(fontSize: 18.0),
               ),
