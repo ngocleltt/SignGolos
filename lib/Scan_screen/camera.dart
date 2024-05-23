@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
+import 'package:signgolos/Design_screen/app_header.dart';
 
 class CameraScreen extends StatefulWidget {
   @override
@@ -104,7 +105,7 @@ class DisplayPictureScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Display the Picture')),
+      appBar: AppHeader(title: 'Display the Picture'),
       body: Image.file(File(imagePath)),
     );
   }

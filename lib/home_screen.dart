@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:signgolos/lesson.dart';
 import 'package:signgolos/login_screen.dart';
 import 'package:signgolos/profile.dart';
 import 'package:signgolos/Scan_screen/scan_choose.dart';
 import 'package:signgolos/Scan_screen/camera.dart';
 import 'package:signgolos/Scan_screen/library_image.dart';
+import 'package:signgolos/welcome_screen.dart';
 import 'Design_screen/app_header.dart';
 import 'package:signgolos/text_translate.dart';
 import 'package:signgolos/app_colors.dart';
@@ -20,7 +22,6 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppHeader(
         title: 'Home',
         titleColor: Colors.white,
-        fontFamily: 'Poppins-Light',
       ),
       drawer: _buildDrawer(context),
       body: SingleChildScrollView(
@@ -107,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
             "Tapping into sign language is not just about what's seen, but what's felt from the heart.",
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontFamily: 'Poppins-Light',
+              fontFamily: 'Poppins-Italic',
               color: Colors.white,
               fontSize: 16.0,
               fontWeight: FontWeight.normal,
@@ -160,7 +161,7 @@ class _HomeScreenState extends State<HomeScreen> {
           },
         ),
         _buildFeatureCard(
-          icon: Icons.camera_alt,
+          icon: Icons.text_fields,
           title: 'Text Translate',
           onTap: () {
             Navigator.push(
@@ -170,12 +171,12 @@ class _HomeScreenState extends State<HomeScreen> {
           },
         ),
         _buildFeatureCard(
-          icon: Icons.image,
-          title: 'Library',
+          icon: Icons.book_sharp,
+          title: 'Lesson',
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => LibraryImageScreen()),
+              MaterialPageRoute(builder: (context) => LessonScreen()),
             );
           },
         ),

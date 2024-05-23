@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:signgolos/app_colors.dart';
 import 'package:signgolos/home_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:signgolos/home_screen.dart';
-import 'login_screen.dart';  // Import file login_screen.dart
+import 'login_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   @override
@@ -26,17 +24,29 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       body: Column(
         children: <Widget>[
           Expanded(
-            child: PageView(
-              controller: _pageController,
-              children: <Widget>[
-                _buildPageContent(
-                  text: 'Empowering voices, transforming communication',
-                  color: Colors.white,
+            child: Stack(
+              children: [
+                Positioned(
+                  top: 165.0, // Đặt vị trí top của logo
+                  left: 0,
+                  right: 0,
+                  child: Center(
+                    child: Image.asset('assets/logo/logo.png', width: 260, height: 260),
+                  ),
                 ),
-                _buildPageContent(
-                  text: 'SIGN В ГОЛОС',
-                  color: Colors.white,
-                  showButton: true,
+                PageView(
+                  controller: _pageController,
+                  children: <Widget>[
+                    _buildPageContent(
+                      text: 'Empowering voices, transforming communication',
+                      color: Colors.transparent,
+                    ),
+                    _buildPageContent(
+                      text: 'SIGN В ГОЛОС',
+                      color: Colors.transparent,
+                      showButton: true,
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -70,9 +80,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          if (!isCoverImage)
-            Image.asset('assets/logo/logo.png', width: 250, height: 250),
-          if (!isCoverImage) SizedBox(height: 50),
+          SizedBox(height: 250),
           Text(
             text,
             style: TextStyle(
@@ -100,12 +108,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 ),
               ),
               child: Text(
-                  'Get started',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontFamily: 'Poppins-Light',
-                  ),
+                'Get started',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                  fontFamily: 'Poppins-Light',
+                ),
               ),
             ),
           ],
@@ -114,4 +122,3 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     );
   }
 }
-

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:signgolos/app_colors.dart';
 import 'package:signgolos/home_screen.dart';
+import 'package:signgolos/lesson.dart';
+import 'package:signgolos/text_translate.dart';
 import 'Design_screen/custom_bottom_nav_bar.dart';
 import 'Design_screen/app_header.dart';
 import 'login_screen.dart';
@@ -20,22 +23,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
       if (index == 0) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => LoginScreen()),
+          MaterialPageRoute(builder: (context) => HomeScreen()),
         );
       } else if (index == 1) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => HomeScreen()),
+          MaterialPageRoute(builder: (context) => ScanChooseScreen()),
         );
       } else if (index == 2) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => ProfileScreen()),
+          MaterialPageRoute(builder: (context) => TextTranslateScreen()),
         );
-      } else if (index == 3) { // Sửa điều kiện này để điều hướng đúng đến ScanChooseScreen
+      } else if (index == 3) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => ScanChooseScreen()),
+          MaterialPageRoute(builder: (context) => LessonScreen()),
         );
       }
     });
@@ -46,7 +49,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       appBar: AppHeader(
         title: 'Profile',
-        fontFamily: 'Poppins-Light',
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -93,7 +95,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Card(
       margin: const EdgeInsets.symmetric(vertical: 8.0),
       child: ListTile(
-        leading: Icon(icon, color: Colors.blue),
+        leading: Icon(icon, color: appblue),
         title: Text(
           title,
           style: TextStyle(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:signgolos/lesson.dart';
+import 'package:signgolos/text_translate.dart';
 import 'Design_screen/custom_bottom_nav_bar.dart';
 import 'Design_screen/app_header.dart';
 import 'welcome_screen.dart';
@@ -21,22 +23,22 @@ class _LoginScreenState extends State<LoginScreen> {
       if (index == 0) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => LoginScreen()),
+          MaterialPageRoute(builder: (context) => HomeScreen()),
         );
       } else if (index == 1) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => HomeScreen()),
+          MaterialPageRoute(builder: (context) => ScanChooseScreen()),
         );
       } else if (index == 2) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => ProfileScreen()),
+          MaterialPageRoute(builder: (context) => TextTranslateScreen()),
         );
       } else if (index == 3) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => ScanChooseScreen()),
+          MaterialPageRoute(builder: (context) => LessonScreen()),
         );
       }
     });

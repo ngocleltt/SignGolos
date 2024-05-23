@@ -75,6 +75,12 @@ flutter:
     - family: Poppins-Light
       fonts:
         - asset: assets/fonts/Poppins-Light.ttf
+    - family: Poppins-SemiBold
+      fonts:
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+    - family: Poppins-Italic
+      fonts:
+        - asset: assets/fonts/Poppins-Italic.ttf
 
   # To add assets to your application, add an assets section, like this:
   #   - images/a_dot_burr.jpeg

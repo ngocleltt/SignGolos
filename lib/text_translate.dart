@@ -23,10 +23,7 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
     return Scaffold(
       appBar: AppHeader(
         title: 'Text to Sign Language',
-        backgroundColor: appblue,
-        titleColor: Colors.white,
         toolbarHeight: 80.0,
-        fontFamily: 'Poppins-Light',
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -43,7 +40,13 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: _translateText,
-              child: Text('Translate'),
+              child: Text('Translate',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 10,
+                  fontFamily: 'Poppins-Light',
+                ),
+              ),
               style: ElevatedButton.styleFrom(
                 backgroundColor: appblue,
                 padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 15.0),
@@ -58,7 +61,10 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
                     : Center(
                   child: Text(
                     'Translation will appear here',
-                    style: TextStyle(fontSize: 16.0),
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 12,
+                      fontFamily: 'Poppins-Light',),
                   ),
                 ),
               ),

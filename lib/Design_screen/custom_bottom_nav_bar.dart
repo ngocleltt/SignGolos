@@ -19,26 +19,26 @@ class BottomNavBar extends StatelessWidget {
     return BottomNavigationBar(
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: Icon(Icons.login),
-          label: 'Login',
-        ),
-        BottomNavigationBarItem(
           icon: Icon(Icons.home),
           label: 'Home',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.person),
-          label: 'Profile',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.camera),
           label: 'Scan',
         ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.text_fields),
+          label: 'Translate',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.library_books),
+          label: 'Lesson',
+        ),
       ],
       currentIndex: selectedIndex,
-      selectedItemColor: Colors.blue, // Màu cho mục được chọn
-      unselectedItemColor: Colors.grey, // Màu cho các mục không được chọn
-      backgroundColor: Color.fromRGBO(0, 176, 232, 1), // Màu nền của BottomNavigationBar
+      selectedItemColor: appblue,
+      unselectedItemColor: Colors.grey,
+      backgroundColor: appblue,
       onTap: onItemTapped,
     );
   }

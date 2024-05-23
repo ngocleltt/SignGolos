@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:signgolos/Design_screen/app_header.dart';
 
 class LibraryImageScreen extends StatefulWidget {
   @override
@@ -26,8 +27,8 @@ class _LibraryImageScreenState extends State<LibraryImageScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Select Image'),
+      appBar: AppHeader(
+        title: 'Select Image',
       ),
       body: Center(
         child: _image == null

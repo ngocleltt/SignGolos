@@ -13,7 +13,7 @@ class AppHeader extends StatelessWidget implements PreferredSizeWidget {
     this.backgroundColor = lightogrance,
     this.titleColor = Colors.white,
     this.toolbarHeight = 80,
-    this.fontFamily = 'Poppins-Light',
+    this.fontFamily = 'Poppins-SemiBold',
   });
 
   @override
