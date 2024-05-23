@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "3075502932",
+    "project_id": "signgolos-3f310",
+    "storage_bucket": "signgolos-3f310.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:3075502932:android:d079eb9cefe27e278b4ec1",
+        "android_client_info": {
+          "package_name": "com.example.signgolos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "3075502932-uojjs58jou5ruj4sk3t5m20klmd59bqa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.signgolos",
+            "certificate_hash": "f51aba74a3cbbbeacd5ef91ad7c5eb47bccf1527"
+          }
+        },
+        {
+          "client_id": "3075502932-4echsjjkbuhsbgkmbe2d0ue16g87mffm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCf7PC-g-v4gRFx9iwYwZ_Guzsayqp8HCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "3075502932-4echsjjkbuhsbgkmbe2d0ue16g87mffm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
